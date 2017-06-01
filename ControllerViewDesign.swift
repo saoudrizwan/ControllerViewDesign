@@ -26,11 +26,7 @@ class ControllerView: UIView {
     func layoutViews() { }
 }
 
-protocol ControllerDelegate: class {
-    weak var controllerView: ControllerView? { get set }
-}
-
-class Controller: UIViewController, ControllerDelegate {
+class Controller: UIViewController {
     weak var controllerView: ControllerView? {
         didSet {
             self.setViewHandlers()
