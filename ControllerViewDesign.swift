@@ -1,9 +1,6 @@
-//
+//  Controller View Design Pattern
 //  ControllerViewDesign.swift
-//
-//  Created by Saoud Rizwan on 6/1/17.
-//  Copyright © 2017 Saoud Rizwan. All rights reserved.
-//
+//  Created by Saoud Rizwan 6/1/17
 
 import UIKit
 
@@ -42,4 +39,3 @@ class Controller: UIViewController, ControllerDelegate {
     
     func setViewHandlers() { }
 }
-https://github.com/saoudrizwan/ControllerViewDesign.git
