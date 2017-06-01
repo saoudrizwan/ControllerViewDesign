@@ -20,32 +20,9 @@ CVD is a programming design pattern, not a framework, so there shouldn't be much
 ## Getting Started
 Usually we would create subviews and lay them out in our *UIViewController*'s *viewDidLoad()* method, and then also add any animation functions if we need them. However with CVD, we put all that view-related code in a *ControllerView* subclass and set view handlers (like targets, gesture recognizers, delegates, data sources, etc.) and call any animation functions in a *Controller* subclass.
 
-1. [Create a Controller subclass.](#creating-a-controller-subclass)
+1. [Create a ControllerView subclass.](#creating-a-controllerview-subclass)
 
-2. [Create a ControllerView subclass.](#creating-a-controllerview-subclass)
-
-### Creating a Controller subclass
-*Controller* is simply a subclass of a *UIViewController* that's linked to a *ControllerView* class.
-```swift
-class HomeController: Controller {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        controllerView = HomeControllerView(controller: self)
-    }
-    
-    override func setViewHandlers() {
-        guard let controllerView = self.controllerView as? HomeControllerView else { fatalError("Controller view has not been set") }
-        controllerView.label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(labelTapped)))
-    }
-    
-    func labelTapped() {
-        guard let controllerView = self.controllerView as? HomeControllerView else { fatalError("Controller view has not been set") }
-        controllerView.animateLabel()
-    }
-    
-}
-```
+2. [Create a Controller subclass.](#creating-a-controller-subclass)
 
 ### Creating a ControllerView subclass
 *ControllerView* is simply a subclass of a *UIView*, and will act as a 'container view' for all our subviews.
@@ -77,5 +54,28 @@ class HomeControllerView: ControllerView {
             // update constraints or frame ...
         }, completion: nil)
     }
+}
+```
+
+### Creating a Controller subclass
+*Controller* is simply a subclass of a *UIViewController* that's linked to a *ControllerView* class.
+```swift
+class HomeController: Controller {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        controllerView = HomeControllerView(controller: self)
+    }
+    
+    override func setViewHandlers() {
+        guard let controllerView = self.controllerView as? HomeControllerView else { fatalError("Controller view has not been set") }
+        controllerView.label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(labelTapped)))
+    }
+    
+    func labelTapped() {
+        guard let controllerView = self.controllerView as? HomeControllerView else { fatalError("Controller view has not been set") }
+        controllerView.animateLabel()
+    }
+    
 }
 ```
