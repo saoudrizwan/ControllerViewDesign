@@ -7,7 +7,7 @@
   • <a href="#getting-started">Getting Started</a>
 </p>
 
-The Control View Design pattern, or CVD, is a fresh and elegant approach to delegating subviews' initialization, layout, and animation code to a separate class from UIViewControllers. Managing user interfaces programatically can result in massive view controller classes; however with CVD, view-related code is contained in a **ControllerView** subclass while data model management, user interaction, etc. is handled by a **Controller** subclass (previously known as a ViewController.) [Read the Medium article.](https://medium.com/@sdrzn/controller-view-design-pattern-for-swift-new-6283cb052)
+The Control View Design pattern, or CVD, is a fresh & elegant approach to delegating subviews' initialization, layout, and animation code to a separate class from UIViewControllers. Managing user interfaces programatically can result in massive view controller classes; however with CVD, view-related code is contained in a **ControllerView** subclass while data model management, user interaction, etc. is handled by a **Controller** subclass (previously known as a ViewController.) [Read the Medium article.](https://medium.com/@sdrzn/controller-view-design-pattern-for-swift-new-6283cb052)
 
 ## Compatibility
 
