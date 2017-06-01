@@ -71,6 +71,7 @@ class HomeController: Controller {
         controllerView = HomeControllerView(controller: self)
     }
     
+    // Use this function to set up any targets, gesture recognizers, delegates, data sources, etc. for our subviews. Our ControllerView subclass automatically calls this function for us in the background at the proper time.
     override func setViewHandlers() {
         // To access our views, we first have to downcast our controllerView class property to our custom ControllerView subclass.
         guard let controllerView = self.controllerView as? HomeControllerView else { fatalError("Controller view has not been set") }
