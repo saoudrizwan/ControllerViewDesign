@@ -7,7 +7,7 @@
   • <a href="#getting-started">Getting Started</a>
 </p>
 
-The Control View Design pattern, or CVD, is a fresh and elegant approach to delegating subviews' initialization, layout, and animation code to a separate class from UIViewControllers. Managing user interfaces programatically can result in massive view controller classes; however with CVD, view-related code is contained in a ControllerView subclass while data model management, user interaction, etc. is handled by a Controller subclass (previously known as a ViewController.)
+The Control View Design pattern, or CVD, is a fresh and elegant approach to delegating subviews' initialization, layout, and animation code to a separate class from UIViewControllers. Managing user interfaces programatically can result in massive view controller classes; however with CVD, view-related code is contained in a **ControllerView** subclass while data model management, user interaction, etc. is handled by a **Controller** subclass (previously known as a ViewController.) [Read the Medium article.](https://medium.com/@sdrzn/controller-view-design-pattern-for-swift-new-6283cb052)
 
 ## Compatibility
 
@@ -18,7 +18,7 @@ The Controller View Design pattern is to be used primarily with Swift.
 CVD is a programming design pattern, not a framework, so there shouldn't be much overhead when using it. The required boilerplate code is ~30 lines of Swift, which you can add anywhere in your project. You can also drag and drop `ControllerViewDesign.swift` into your project.
 
 ## Getting Started
-Before, we would create a *UIViewController* subclass, where we initialize subviews, lay them out in our *viewDidLoad()* method, and then add any animation functions if we need them. 
+Before, we would create a *UIViewController* subclass, where we initialize subviews, lay them out in our *viewDidLoad()* method, and then add any animation functions if we needed them. 
 However with CVD, we put all that view-related code in a *ControllerView* subclass and set view handlers (like targets, gesture recognizers, delegates, data sources, etc.) & call any animation functions in a *Controller* subclass.
 
 1. [Create a ControllerView subclass.](#creating-a-controllerview-subclass)
@@ -50,7 +50,7 @@ class HomeControllerView: ControllerView {
     }
     
     // MARK: Methods
-    // We also want to add any interface updating code here such as animations.
+    // We also want to add any interface updating code here, such as animations.
     
     func animateLabel() {
         UIView.animate(withDuration: 0.4, animations: { 
@@ -61,7 +61,7 @@ class HomeControllerView: ControllerView {
 ```
 
 ### Creating a Controller subclass
-*Controller* is simply a subclass of a *UIViewController* that's linked to a *ControllerView* class.
+*Controller* is simply a subclass of a *UIViewController* that's linked to a *ControllerView* instance.
 ```swift
 class HomeController: Controller {
 
@@ -84,7 +84,7 @@ class HomeController: Controller {
     }
 }
 ```
-Now whenever we need to access a subview, we first need to get our ControllerView subclass. 
+Now whenever we need to access a subview, we first need to get our *ControllerView* subclass. 
 ```swift
 extension HomeController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
