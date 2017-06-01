@@ -104,4 +104,4 @@ An alternative way of accessing a ControllerView's views and methods using CVD:
 ```
 
 ## Why should I use CVD?
-If you create, layout, animate, and manage your app's subviews programatically, then CVD is a clean and easy approach to ensuring that you don't end up with massive view controllers. However, if you're using storyboards for your particular project, then MVC or MVVM may be better solutions, as they don't take into account view initialization and layout code.
+If you create, layout, animate, and manage your app's subviews programatically, then CVD is a clean and easy approach to ensuring that you don't end up with massive view controllers. However, if you're using storyboards for your particular project, then MVC or MVVM may be better solutions, as they don't take view initialization and layout code into account.
