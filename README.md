@@ -97,10 +97,11 @@ extension HomeController: UITableViewDataSource {
 ```
 **NOTE:** Don't let the *fatalError()* bit scare you. That's simply there to throw an error if you forget to set the *controllerView* property in the *viewDidLoad()* function.
 
-An alternative way of accessing our views using CVD:
+An alternative way of accessing a ControllerView's views and methods using CVD:
 ```swift
+(controllerView as? HomeControllerView)?.label.text = "Bye world"
 (controllerView as? HomeControllerView)?.animateLabel()
 ```
 
 ## Why should I use CVD?
-If you create, layout, animate, and manage your app's subviews programatically, then CVD is a clean and easy approach to ensuring that you don't end up with massive view controllers. However, if you're using storyboards for your particular project, then MVC or MVVM may be better solutions, as they don't take into account view layout initialization and layout code.
+If you create, layout, animate, and manage your app's subviews programatically, then CVD is a clean and easy approach to ensuring that you don't end up with massive view controllers. However, if you're using storyboards for your particular project, then MVC or MVVM may be better solutions, as they don't take into account view initialization and layout code.
