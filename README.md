@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://cloud.githubusercontent.com/assets/7799382/26687289/36eba6e0-46a4-11e7-9585-0ddfd27ab358.png" alt="Controller View Design" />
+    <img src="https://cloud.githubusercontent.com/assets/7799382/26728385/e6bdd236-475e-11e7-82dc-87b210c59ba3.png" alt="Controller View Design" />
 </p>
 
 <p align="center">
