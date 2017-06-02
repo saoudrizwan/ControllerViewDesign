@@ -34,7 +34,7 @@ However with CVD, we put all that view-related code in a *ControllerView* subcla
 class HomeControllerView: ControllerView {
     
     // MARK: Views
-    // This is where you want to add all your subviews. Creating custom views as computed objects is much faster and easier than creating custom subclasses.
+    // This is where you want to declare all your subviews' instances. Creating custom views as computed objects is much faster and easier than creating custom subclasses.
     
     let label: UILabel = {
         let label = UILabel()
