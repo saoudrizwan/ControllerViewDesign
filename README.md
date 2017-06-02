@@ -53,7 +53,7 @@ class HomeControllerView: ControllerView {
     }
     
     // MARK: Methods
-    // We also want to add any interface updating code here, such as animations.
+    // We also want to add any interface-changing code here, such as animations.
     
     func animateLabel() {
         UIView.animate(withDuration: 0.4, animations: { 
