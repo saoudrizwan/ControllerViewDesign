@@ -100,7 +100,31 @@ extension HomeController: UITableViewDataSource {
 ```
 **NOTE:** Don't let the *fatalError()* bit scare you. That's simply there to throw an error if you forget to set the *controllerView* property in the *viewDidLoad()* function.
 
-An alternative way of accessing a ControllerView's views and methods using CVD:
+**Alternative ways of accessing a ControllerView's views and methods using CVD**
+```swift
+class HomeController: Controller {
+    
+    var homeControllerView: HomeControllerView {
+        get {
+            guard let controllerView = self.controllerView as? HomeControllerView else { fatalError("Controller view has not been set") }
+            return controllerView
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        controllerView = HomeControllerView(controller: self)
+    }
+    
+    override func setViewHandlers() {
+        homeControllerView.label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(labelTapped)))
+    }
+    
+    func labelTapped() {
+        homeControllerView.animateLabel()
+    }
+}
+```
 ```swift
 (controllerView as? HomeControllerView)?.label.text = "Bye world"
 (controllerView as? HomeControllerView)?.animateLabel()
