@@ -101,7 +101,9 @@ extension HomeController: UITableViewDataSource {
 **NOTE:** Don't let the *fatalError()* bit scare you. That's simply there to throw an error if you forget to set the *controllerView* property in the *viewDidLoad()* function.
 
 **Alternative ways of accessing a ControllerView's views and methods using CVD:**
+
 Using a computer variable with a custom getter:
+
 ```swift
 class HomeController: Controller {
     
