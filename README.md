@@ -45,7 +45,7 @@ class HomeControllerView: ControllerView {
     
     // MARK: Layout
     
-    override func layoutViews() {
+    override func addSubviews() {
         // Here we will add all our subviews on to self as if we would to self.view in a UIViewController.
         addSubview(label)
         // Set constraints or frames for all our subviews here as well.
