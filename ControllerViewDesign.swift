@@ -20,12 +20,12 @@ class ControllerView: UIView {
         self.rightAnchor.constraint(equalTo: controller.view.rightAnchor).isActive = true
         self.backgroundColor = UIColor.white
         self.controller = controller
-        layoutViews()
+        addSubviews()
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
-    func layoutViews() { }
+    func addSubviews() { }
 }
 
 class Controller: UIViewController {
