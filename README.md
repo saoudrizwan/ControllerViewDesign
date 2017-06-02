@@ -17,8 +17,7 @@ The Control View Design pattern, or CVD, is a new & elegant approach to delegati
 The Controller View Design pattern is to be used primarily with Swift. 
 
 ## Installation
-
-CVD is a programming design pattern, not a framework, so there shouldn't be much overhead when using it. The required boilerplate code is ~30 lines of Swift, which you can add anywhere in your project. You can also drag and drop `ControllerViewDesign.swift` into your project.
+The required boilerplate code is included in `ControllerViewDesign.swift`, which you can add anywhere in your project. You can also drag and drop `ControllerViewDesign.swift` into your project.
 
 ## Getting Started
 Before, we would create a *UIViewController* subclass, where we initialize subviews, lay them out in our *viewDidLoad()* method, and then add any animation functions if we needed them. 
