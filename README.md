@@ -136,7 +136,7 @@ class HomeController: Controller {
 
 ## Should I use CVD?
 
-If you create, layout, animate, and manage your app's subviews programatically, then CVD is a clean & easy approach to ensuring you don't end up with massive view controllers. CVD is a design pattern you can use alongside other design patterns like MVC or MVVM, so it isn't a complete replacement for them - in fact, it even helps ensure you follow proper MVC guidelines if that's what you're using in your project.  However, if you're using only storyboards for your particular project, then CVD may not be the best solution for managing all your IBOutlets.
+If you create, layout, animate, and manage your app's subviews programatically, then CVD is a clean & easy approach to ensuring you don't end up with massive view controllers. CVD is a design pattern you can use alongside other design patterns like MVC or MVVM, so it isn't a complete replacement for them. In fact, it even helps ensure you follow proper MVC guidelines if that's what you're using in your project.  However, if you're using only storyboards for your particular project, then CVD may not be the best solution for managing all your IBOutlets.
 
 ## Credits
 
