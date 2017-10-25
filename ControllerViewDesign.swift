@@ -21,11 +21,13 @@ class ControllerView: UIView {
         self.backgroundColor = UIColor.white
         self.controller = controller
         addSubviews()
+        constrainSubviews()
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
     func addSubviews() { }
+    func constrainSubviews() { }
 }
 
 class Controller: UIViewController {
